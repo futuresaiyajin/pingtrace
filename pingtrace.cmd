@@ -1,6 +1,6 @@
 @echo off
 
-set /p ADDRESS=Please enter pingable adress: 
+set /p NETWORK_ADDRESS=Please enter network adress: 
 set OUTPUT_DIR=%userprofile%\Downloads
 
-for %%a in ("ping" "tracert") do powershell "%%a %ADDRESS% | tee %OUTPUT_DIR%\\%%a_%ADDRESS%.txt"
+for %%a in ("ping" "tracert") do powershell "%%a %NETWORK_ADDRESS% | tee %OUTPUT_DIR%\\%%a_%NETWORK_ADDRESS%.txt"
